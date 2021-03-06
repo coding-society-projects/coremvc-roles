@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using roles.Models;
@@ -22,6 +23,25 @@ namespace roles.Controllers
         {
             return View();
         }
+
+        [Authorize(Roles = "Customer")]
+        public IActionResult Customer()
+        {
+            return View();
+        }
+
+        [Authorize(Roles = "member")]
+        public IActionResult Member()
+        {
+            return View();
+        }
+
+        [Authorize(Roles = "Admin")]
+        public IActionResult Admin()
+        {
+            return View();
+        }
+
 
         public IActionResult Privacy()
         {
