@@ -1,9 +1,16 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <UserSecretsId>aspnet-roles-D4F3E4F8-BEF8-4A3E-859D-EEBA8F2D42A8</UserSecretsId>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Data\Migrations\20210313164257_Products.cs" />
+    <Compile Remove="Data\Migrations\20210313164257_Products.Designer.cs" />
+    <Compile Remove="Data\Migrations\20210313164445_Products2.cs" />
+    <Compile Remove="Data\Migrations\20210313164445_Products2.Designer.cs" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.1.10" />

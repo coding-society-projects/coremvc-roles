@@ -30,7 +30,7 @@ namespace roles.Controllers
             return View();
         }
 
-        [Authorize(Roles = "member")]
+        [Authorize(Roles = "Member")]
         public IActionResult Member()
         {
             return View();
